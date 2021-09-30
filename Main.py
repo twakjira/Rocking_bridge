@@ -176,6 +176,6 @@ st.image(image9, use_column_width=True)
 st.image(image10, use_column_width=True)
 
 st.write('<style>h1{color: red;}</style>', unsafe_allow_html=True)
-st.write('<style>h3{color: white;}</style>', unsafe_allow_html=True)
+st.write('<style>h3{color: green;}</style>', unsafe_allow_html=True)
 
 st.write("### For any comment or furthermore assistance contact: tgwakjira@gmail.com [Tadesse G. Wakjira](https://scholar.google.com/citations?user=Ka3iXSoAAAAJ)")
