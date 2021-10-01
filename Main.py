@@ -4,6 +4,19 @@ import streamlit as st
 from PIL import Image
 import pickle
 
+
+EXPANDER_TEXT = """
+    To change the current theme 🎈 
+    In the app menu (☰ -> Settings -> Theme).
+    """
+    
+READ_ME = """
+This app is under development. 
+To use the app, define the values of the predictors and 
+the predicted responses of the pier will be updated under the section "Predicted responses of the pier".
+In addition, the significance of main effect and interaction of the factors on each response variable is shown in the figures. 
+🎈 
+"""
 # Primary accent for interactive elements
 primaryColor = 'red'
 
@@ -12,7 +25,10 @@ backgroundColor = '#273346'
 
 #st.markdown(html_temp, unsafe_allow_html=True)
 alam = Image.open('ALAMS.png')
-st.image(alam, use_column_width=True)
+#st.image(alam, use_column_width=True)
+#st.image(alam,width=450)
+
+
 
 html_temp = """
 <div style="background-color:black ;padding:10px">
@@ -28,9 +44,17 @@ st.markdown(html_temp, unsafe_allow_html=True)
 #import the dataset
 df = pd.read_excel('data.xlsx', sheet_name = 'data')
 
+""
+with st.beta_expander("Read me"):
+    st.write(READ_ME)
+with st.beta_expander("To change Theme"):
+    st.write(EXPANDER_TEXT)
+
+""
+""
 
 # Header
-st.sidebar.header('Define the input features')
+st.sidebar.header('Define the values of input factors')
 t=14
 def user_defined_paremeters():
     dc = st.sidebar.slider('Diameter of the column, dc (mm)', float(df['dc'].min()), float(df['dc'].max()),
