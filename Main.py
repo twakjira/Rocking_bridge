@@ -156,7 +156,7 @@ html_temp = """
 </div>
 """
 st.markdown(html_temp, unsafe_allow_html=True)
-st.write('### Residual drift to height ratio (%) =', y1)
+st.write('### Residual drift (%) =', y1)
 st.write('### Column cyclic shortening to height ratio (%) =', y2)
 st.write('### Ratio of degraded stiffness to initial stiffness (%) =', y3)
 st.write('### Maximum lateral strength to uplift force ratio =', y4)
