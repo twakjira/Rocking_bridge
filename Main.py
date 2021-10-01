@@ -34,7 +34,7 @@ html_temp = """
 <div style="background-color:black ;padding:10px">
 <h2 style="color:cyan;text-align:center;"> 
 Response prediction of rocking bridge piers using exPlainable ML model
-(under deveopment)
+(under development)
 </h2>
 </div>
 """
